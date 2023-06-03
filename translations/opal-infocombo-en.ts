@@ -9,7 +9,7 @@
         <translation>Details</translation>
     </message>
     <message>
-        <location filename="../Opal/InfoCombo/private/InfoComboPage.qml" line="63"/>
+        <location filename="../Opal/InfoCombo/private/InfoComboPage.qml" line="66"/>
         <source>Option</source>
         <translation>Option</translation>
     </message>
