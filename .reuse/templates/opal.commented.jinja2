@@ -1,0 +1,8 @@
+//@ This file is part of opal-infocombo.
+//@ https://github.com/Pretty-SFOS/opal-infocombo
+{% for copyright_line in copyright_lines %}
+//@ {{ copyright_line }}
+{% endfor %}
+{% for expression in spdx_expressions %}
+//@ SPDX-License-Identifier: {{ expression }}
+{% endfor %}
