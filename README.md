@@ -54,7 +54,7 @@ InfoCombo {
 
 ## Screenshots
 
-TBD.
+Screenshots can be found in the [doc](doc/) directory.
 
 ## How to use
 
