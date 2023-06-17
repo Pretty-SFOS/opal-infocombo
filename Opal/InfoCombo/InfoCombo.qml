@@ -62,9 +62,40 @@ import Sailfish.Silica 1.0
 ComboBox {
     id: root
 
+    /*!
+      This property defines a function that will be called when a link is activated.
+
+      Links in the form of \c {<a href="example.org">Example</a>} are supported
+      in descriptions and will be opened externally by default, using \c {Qt.openUrlExternally}.
+
+      The handler function takes the URL to be opened as its only argument (\a link).
+    */
+    property var linkHandler: function(link) {
+        Qt.openUrlExternally(link)
+    }
+
+    /*!
+      This property holds a reference to the info button.
+
+      It is possible to customize the icon or other properties
+      of the info button through this property.
+    */
     readonly property IconButton infoButton: button
 
+    /*!
+      This signal is emitted when a link in a text is clicked.
+
+      Links are handled by \l linkHandler, which opens them
+      externally by default. This behavior can be changed by
+      assigning \c null to \l linkHandler, or by implementing
+      a custom handler.
+
+      \sa linkHandler
+    */
+    signal linkActivated(var link)
+
     rightMargin: Theme.horizontalPageMargin + Theme.iconSizeMedium
+    onLinkActivated: !!linkHandler && linkHandler(link)
 
     IconButton {
         id: button
@@ -101,18 +132,22 @@ ComboBox {
                     if (item && item.visible &&
                             item.hasOwnProperty("__silica_menuitem") &&
                             item.hasOwnProperty("info")) {
-                        items.push({title: item.text, text: item.info,
-                                    isOption: true})
+                        items.push({
+                            title: item.text,
+                            text: item.info,
+                            isOption: true
+                        })
                     }
                 }
             }
 
             var sections = top.concat(items, bottom)
 
-            pageStack.push(Qt.resolvedUrl("private/InfoComboPage.qml"), {
+            var page = pageStack.push(Qt.resolvedUrl("private/InfoComboPage.qml"), {
                 title: root.label, sections: sections,
                 hasExtraSections: top.length > 0 || bottom.length > 0
             })
+            page.linkActivated.connect(linkActivated)
         }
     }
 }

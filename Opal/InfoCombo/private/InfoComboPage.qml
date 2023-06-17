@@ -14,9 +14,7 @@ Page {
     property var sections: []
     property bool hasExtraSections: false
 
-    property var linkHandler: function(link) {
-        Qt.openUrlExternally(link)
-    }
+    signal linkActivated(var link)
 
     SilicaFlickable {
         id: flick
@@ -56,9 +54,10 @@ Page {
                         truncationMode: TruncationMode.Fade
                         color: palette.highlightColor
                         linkColor: palette.primaryColor
+                        textFormat: Text.StyledText
                         text: modelData.title
 
-                        onLinkActivated: modelData.linkHandler(link)
+                        onLinkActivated: root.linkActivated(link)
                     }
 
                     Label {
@@ -70,10 +69,11 @@ Page {
                         truncationMode: TruncationMode.Fade
                         color: palette.secondaryHighlightColor
                         linkColor: palette.primaryColor
+                        textFormat: Text.StyledText
                         visible: !!modelData.isOption && root.hasExtraSections
                         text: qsTranslate("Opal.InfoCombo", "Option")
 
-                        onLinkActivated: modelData.linkHandler(link)
+                        onLinkActivated: root.linkActivated(link)
                     }
 
                     Label {
@@ -82,10 +82,11 @@ Page {
                         font.pixelSize: Theme.fontSizeSmall
                         color: Theme.highlightColor
                         linkColor: palette.primaryColor
+                        textFormat: Text.StyledText
                         wrapMode: Text.Wrap
                         text: modelData.text
 
-                        onLinkActivated: modelData.linkHandler(link)
+                        onLinkActivated: root.linkActivated(link)
                     }
                 }
             }
