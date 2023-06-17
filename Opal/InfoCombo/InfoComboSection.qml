@@ -42,6 +42,18 @@ QtObject {
     property bool placeAtTop: true
 
     /*!
+      This property defines a function that will be called when a link is activated.
+
+      Links in the form of \c {<a href="example.org">Example</a>} are supported
+      in descriptions and will be opened externally by default, using \c {Qt.openUrlExternally}.
+
+      The handler function takes the URL to be opened as its only argument (\a link).
+    */
+    property var linkHandler: function(link) {
+        Qt.openUrlExternally(link)
+    }
+
+    /*!
       This property marks this component as a info combo section.
       \internal
     */
