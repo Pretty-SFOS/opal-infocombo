@@ -4,12 +4,12 @@
 <context>
     <name>Opal.InfoCombo</name>
     <message>
-        <location filename="../Opal/InfoCombo/private/InfoComboPage.qml" line="32"/>
+        <location filename="../Opal/InfoCombo/private/InfoComboPage.qml" line="36"/>
         <source>Details</source>
         <translation>Details</translation>
     </message>
     <message>
-        <location filename="../Opal/InfoCombo/private/InfoComboPage.qml" line="66"/>
+        <location filename="../Opal/InfoCombo/private/InfoComboPage.qml" line="74"/>
         <source>Option</source>
         <translation>Option</translation>
     </message>
