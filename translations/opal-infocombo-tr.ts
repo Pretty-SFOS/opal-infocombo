@@ -4,7 +4,7 @@
 <context>
     <name>Opal.InfoCombo</name>
     <message>
-        <location filename="../Opal/InfoCombo/private/InfoComboPage.qml" line="36"/>
+        <location filename="../Opal/InfoCombo/private/InfoComboPage.qml" line="34"/>
         <source>Details</source>
         <translation>Ayrıntılar</translation>
     </message>
