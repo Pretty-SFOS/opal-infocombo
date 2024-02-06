@@ -11,7 +11,7 @@
     <message>
         <location filename="../Opal/InfoCombo/private/InfoComboPage.qml" line="74"/>
         <source>Option</source>
-        <translation type="unfinished"></translation>
+        <translation>设置</translation>
     </message>
 </context>
 </TS>
