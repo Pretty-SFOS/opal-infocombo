@@ -6,7 +6,7 @@
     <message>
         <location filename="../Opal/InfoCombo/private/InfoComboPage.qml" line="39"/>
         <source>Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Informatie</translation>
     </message>
 </context>
 </TS>
