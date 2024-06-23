@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2023 Mirian Margiani
+SPDX-FileCopyrightText: 2023-2024 Mirian Margiani
 SPDX-License-Identifier: GFDL-1.3-or-later
 -->
 
@@ -104,7 +104,7 @@ details on how to translate date formats to your local format.
 
 ## License
 
-    Copyright (C) 2023  Mirian Margiani
+    Copyright (C) 2023-2024  Mirian Margiani
     Program: opal-infocombo
 
     This program is free software: you can redistribute it and/or modify
