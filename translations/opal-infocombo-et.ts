@@ -4,14 +4,13 @@
 <context>
     <name>Opal.InfoCombo</name>
     <message>
-        <location filename="../Opal/InfoCombo/private/InfoComboPage.qml" line="34"/>
+        <location filename="../Opal/InfoCombo/private/InfoComboPage.qml" line="39"/>
         <source>Details</source>
         <translation>Lisateave</translation>
     </message>
     <message>
-        <location filename="../Opal/InfoCombo/private/InfoComboPage.qml" line="74"/>
         <source>Option</source>
-        <translation>Valikud</translation>
+        <translation type="vanished">Valikud</translation>
     </message>
 </context>
 </TS>
