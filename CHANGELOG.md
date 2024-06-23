@@ -5,6 +5,16 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
 # Changelog
 
+## 2.1.0 (2024-06-23)
+
+- addded support for changing options from the details page
+- this can be disabled using the new `allowChanges` property in `InfoCombo`
+- updated documentation regarding links:
+    - hyperlinks are only allowed in custom sections (`InfoComboSection`) but
+      not in option descriptions
+    - this is a technical limitation in the Silica `TextSwitch` component
+      and cannot easily be solved here
+
 ## 2.0.0 (2023-06-29)
 
 - moved the ready-made Attribution component from
