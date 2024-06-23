@@ -7,7 +7,7 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
 ## 2.1.0 (2024-06-23)
 
-- updated translations: Russian, Spanish, Chinese
+- updated translations: Russian, Spanish, Chinese, Czech, Dutch, Hungarian, Italian
 - addded support for changing options from the details page
 - this can be disabled using the new `allowChanges` property in `InfoCombo`
 - updated documentation regarding links:
