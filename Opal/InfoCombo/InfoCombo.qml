@@ -1,6 +1,6 @@
 //@ This file is part of opal-infocombo.
 //@ https://github.com/Pretty-SFOS/opal-infocombo
-//@ SPDX-FileCopyrightText: 2023 Mirian Margiani
+//@ SPDX-FileCopyrightText: 2023-2024 Mirian Margiani
 //@ SPDX-License-Identifier: GPL-3.0-or-later
 
 import QtQuick 2.2
@@ -63,10 +63,21 @@ ComboBox {
     id: root
 
     /*!
+      Disable this to forbid changing the current index from the info page.
+
+      This setting is enabled by default, unless \c enabled is set to \c false.
+    */
+    property bool allowChanges: true
+    readonly property bool _proxyChangesAllowed: allowChanges && enabled
+
+    /*!
       This property defines a function that will be called when a link is activated.
 
-      Links in the form of \c {<a href="example.org">Example</a>} are supported
-      in descriptions and will be opened externally by default, using \c {Qt.openUrlExternally}.
+      Links in the form of \c {<a href="example.org">Example</a>} will be opened
+      externally by default, using \c {Qt.openUrlExternally}.
+
+      \note Links are only supported in custom sections. Entry descriptions
+      cannot contain links.
 
       The handler function takes the URL to be opened as its only argument (\a link).
     */
@@ -89,6 +100,9 @@ ComboBox {
       externally by default. This behavior can be changed by
       assigning \c null to \l linkHandler, or by implementing
       a custom handler.
+
+      \note Links are only supported in custom sections. Entry descriptions
+      cannot contain links.
 
       \sa linkHandler
     */
@@ -141,11 +155,11 @@ ComboBox {
                 }
             }
 
-            var sections = top.concat(items, bottom)
-
             var page = pageStack.push(Qt.resolvedUrl("private/InfoComboPage.qml"), {
-                title: root.label, sections: sections,
-                hasExtraSections: top.length > 0 || bottom.length > 0
+                title: root.label,
+                topNotes: top, bottomNotes: bottom, items: items,
+                allowChanges: _proxyChangesAllowed,
+                comboBox: root
             })
             page.linkActivated.connect(linkActivated)
         }
