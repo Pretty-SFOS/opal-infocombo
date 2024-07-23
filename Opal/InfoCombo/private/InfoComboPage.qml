@@ -36,7 +36,6 @@ Page {
 
             PageHeader {
                 title: root.title
-                description: qsTranslate("Opal.InfoCombo", "Details")
             }
 
             Repeater {
