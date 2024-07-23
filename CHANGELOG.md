@@ -5,6 +5,12 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
 # Changelog
 
+## 2.2.0 (2024-07-23)
+
+- removed the last remaining translated string, so no translations are needed anymore
+- reintroduced support for links in options descriptions
+- refined styling in general
+
 ## 2.1.0 (2024-06-23)
 
 - updated translations: Russian, Spanish, Chinese, Czech, Dutch, Hungarian, Italian
