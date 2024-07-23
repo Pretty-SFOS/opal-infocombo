@@ -51,6 +51,7 @@ Page {
                     allowChanges: root.allowChanges
                     comboBox: root.comboBox
                     modelIndex: index
+                    onLinkActivated: root.linkActivated(link)
                 }
             }
 
