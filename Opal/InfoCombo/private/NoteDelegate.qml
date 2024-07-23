@@ -26,9 +26,10 @@ Column {
         horizontalAlignment: Text.AlignRight
         font.pixelSize: Theme.fontSizeSmall
         truncationMode: TruncationMode.Fade
-        color: palette.highlightColor
-        linkColor: palette.primaryColor
+        color: palette.secondaryHighlightColor
+        linkColor: palette.secondaryColor
         textFormat: Text.StyledText
+        height: text.length ? implicitHeight : 0
         text: modelData.title
 
         onLinkActivated: root.linkActivated(link)
@@ -38,8 +39,8 @@ Column {
         width: parent.width - 2*x
         x: Theme.horizontalPageMargin
         font.pixelSize: Theme.fontSizeSmall
-        color: Theme.highlightColor
-        linkColor: palette.primaryColor
+        color: palette.secondaryHighlightColor
+        linkColor: palette.secondaryColor
         textFormat: Text.StyledText
         wrapMode: Text.Wrap
         text: modelData.text
