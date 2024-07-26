@@ -104,7 +104,7 @@ details on how to translate date formats to your local format.
 
 ## License
 
-    Copyright (C) 2023-2024  Mirian Margiani
+    Copyright (C)  Mirian Margiani
     Program: opal-infocombo
 
     This program is free software: you can redistribute it and/or modify
