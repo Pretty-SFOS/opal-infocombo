@@ -5,6 +5,11 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
 # Changelog
 
+## 2.2.1 (2024-10-11)
+
+- updated packaging boilerplate and attribution file
+- added screenshots to readme
+
 ## 2.2.0 (2024-07-23)
 
 - removed the last remaining translated string, so no translations are needed anymore
