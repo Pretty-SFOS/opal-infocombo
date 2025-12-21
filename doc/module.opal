@@ -11,7 +11,7 @@
 #
 
 # current semantic version number, cf. https://semver.org
-version: 2.2.1
+version: 2.2.2
 
 # plain name as used in the module repository URL, will be prefixed with "opal-"
 # where necessary
@@ -32,7 +32,7 @@ description: This module provides a combo box that can show details for each sel
 
 # attribution string for the whole module, in the same form as a SPDX
 # FileCopyrightText entry.
-attribution: 2023-2024 Mirian Margiani
+attribution: 2023-2025 Mirian Margiani
 
 # colon-separated list of this module's current maintainer(s)
 maintainers: Mirian Margiani
